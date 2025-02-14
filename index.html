@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadeřnictví</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-logo">
+            <a href="#puvodnistav">LuhaStyle</a>
+        </div>
+
+        
+        <ul class="navbar-links">
+            <li><a href="#home">Domů</a></li>
+            <li><a href="#services">Služby</a></li>
+            <li><a href="#reserve">Ukázky práce</a></li>
+            <li><a href="#recenze">Recenze</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-image">
+        <div class="overlay"></div>
+        <h1 class="header-title">Kadeřnictví Luhačovice</h1>
+        <h2 class="header-subtitle">Osvěžte svůj vzhled s námi!</h2>
+        <a href="rezervace.html" class="rezervace-btn">Rezervovat termín</a>
+
+    </div>
+
+    <div class="smerovac" id="smerovac">
+        <span class="period active"></span>
+        <span class="period"></span>
+        <span class="period"></span>
+        <span class="period"></span>
+        <span class="period"></span>
+    </div>
+
+    <div id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Nabízené služby</h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <i data-lucide="scissors" class="service-icon"></i>
+                    <h3 class="service-title">Střih</h3>
+                    <p class="service-cena">200 Kč</p>
+                </div>
+
+                <div class="service-card">
+                    <i data-lucide="wind" class="service-icon"></i>
+                    <h3 class="service-title">Foukaná</h3>
+                    <p class="service-cena">500 Kč</p>
+                </div>
+
+                <div class="service-card">
+                    <i data-lucide="scissors " class="service-icon"></i>
+                    <i data-lucide="plus" class="service-icon plus"></i>
+                    <i data-lucide="wind"  class="service-icon"></i>
+                    <h3 class="service-title">Střih + Foukaná</h3>
+                    <p class="service-cena">800 Kč</p>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reserve" class="reserve">
+        <h2 class="title-ukazky">Ukázky práce</h2>
+        <div class="galerie">
+            <div class="gallery-item">
+                <img src="assets/images/prvni promena.jpg" alt="Ukázka 1" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/druha promena.jpg" alt="Ukázka 2" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/treti promena.jpg" alt="Ukázka 3" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/ctrvtaa promena.jpg" alt="Ukázka 4" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/pata promena.png" alt="Ukázka 5" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/sesta promena.jpg" alt="Ukázka 6" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/sedma promena.jpg" alt="Ukázka 7" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/osma promena.jpg" alt="Ukázka 8" class="gallery-img">
+            </div>
+        </div>
+    
+        
+        <div id="gallery-modal" class="gallery-modal">
+            
+            <div class="close-gallery">
+                <button class="zavreni-galerie">X</button>
+            </div>
+
+            <div class="gallery-nav left">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="gallery-nav right">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+    
+            <img id="modal-img" src="" alt="Zvětšený obrázek" class="modal-img">
+        </div>
+    </div>
+    
+    <div id="recenze" class="recenze">
+        <h2 class="recenze-title">Recenze našich klientů</h2>
+        
+        <div class="recenze-container">
+            <div class="recenze-slider">
+                <div class="recenze-item">
+                    <div class="recenze-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="recenze-text">
+                            "Konečně jsem našla své kadeřnictví! Vždy mi poradí s výběrem účesu a péčí o vlasy. Děkuji za skvělou péči!"
+                        </p>
+                        <div class="recenze-footer">
+                            <p class="recenze-autor">Jana Svobodová</p>
+                            <p class="recenze-cas">před 2 dny</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="recenze-item">
+                    <div class="recenze-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="recenze-text">
+                            "Naprosto úžasné kadeřnictví! Vždy odcházím s perfektním účesem a skvělou náladou. Profesionální a přátelský přístup."
+                        </p>
+                        <div class="recenze-footer">
+                            <p class="recenze-autor">Marie Nováková</p>
+                            <p class="recenze-cas">před týdnem</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="recenze-item">
+                    <div class="recenze-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="recenze-text">
+                            "Velmi příjemné prostředí a profesionální přístup. Vždy se těším na další návštěvu!"
+                        </p>
+                        <div class="recenze-footer">
+                            <p class="recenze-autor">Petra Dvořáková</p>
+                            <p class="recenze-cas">před 2 týdny</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="recenze-item">
+                    <div class="recenze-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="recenze-text">
+                            "Skvělá atmosféra a precizní práce. Vždy odcházím maximálně spokojená s výsledkem!"
+                        </p>
+                        <div class="recenze-footer">
+                            <p class="recenze-autor">Lucie Veselá</p>
+                            <p class="recenze-cas">před měsícem</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="recenze-item">
+                    <div class="recenze-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="recenze-text">
+                            "Profesionální přístup a příjemná atmosféra. Doporučuji všem, kdo hledají kvalitní kadeřnictví!"
+                        </p>
+                        <div class="recenze-footer">
+                            <p class="recenze-autor">Markéta Černá</p>
+                            <p class="recenze-cas">před 2 měsíci</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="recenze-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div id="contact" class="kontakt">
+        <h2>Kde nás najdete?</h2>
+        <div class="mapa-kontejner">
+            <iframe style="border:none" src="https://frame.mapy.cz/s/ladarusera" width="750" height="600" frameborder="0"></iframe>
+        </div>
+    </div>
+   
+    <script src="assets/scripts/script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();</script>
+</body>
+</html>
