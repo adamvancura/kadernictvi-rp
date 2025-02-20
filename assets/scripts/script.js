@@ -103,38 +103,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, casPrepinaniFourSeconds);
 });
-
-
-/*Hamburger*/
-document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("navbar");
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".navbar-links");
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        hamburger.classList.toggle("active");
-    });
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-            navbar.classList.add("zmenseny-navbar");
-        } else {
-            navbar.classList.remove("zmenseny-navbar");
-        }
-    });
-
-    const navItems = document.querySelectorAll('.navbar-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-
-    const domu = document.querySelector('.navbar-links a[href="#home"]');
-    domu.addEventListener("click", (event) => {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-});

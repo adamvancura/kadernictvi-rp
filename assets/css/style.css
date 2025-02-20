@@ -133,11 +133,12 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .rezervace-btn:hover {
-    color: #F8AB81;
-    border: 2px solid #F8AB81;
+    color: white; /* Zvýraznění textu */
+    background-color: #E07A4A; /* Mírně tmavší barva pozadí při najetí */
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -283,6 +284,7 @@ body {
     height: 400px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .gallery-img {
@@ -514,6 +516,25 @@ body {
 
 
 /*Tvorba responsu*/
+@media screen and (max-width: 1024px) {
+    .header-title {
+        font-size: 2.5rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 10px;
@@ -540,6 +561,33 @@ body {
     .recenze-container {
         width: 90%;
     }
+
+    .services-list {
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .header-title {
+        font-size: 1.8rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -559,7 +607,12 @@ body {
     }
     
     .header-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    .header-title:hover {
+        color: #F8AB81;
     }
     
     .header-subtitle {
@@ -570,118 +623,82 @@ body {
         width: 100%;
         background-color: #F8AB81;
         margin: 0;
-        padding: 0;
+        padding: 20px 0;
     }
 
     .container {
-        width: 100%;
-        margin: 0;
-        padding: 20px;
-        overflow: hidden;
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
     }
 
     .section-title {
         color: white;
         margin: 0 0 20px 0;
-        font-size: 2rem;
-        text-align: left;
+        font-size: 1.8rem;
+        text-align: center;
     }
 
     .services-list {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        width: 100%;
+        gap: 20px;
+        align-items: center;
     }
     
     .service-card {
+        width: 90%;
+        max-width: 350px;
         background-color: white;
-        border-radius: 12px;
-        padding: 25px 15px;
+        border-radius: 10px;
+        padding: 30px;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        width: 100%;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
     
     .service-title {
-        color: #B68973;
-        font-size: 1.4rem;
-        margin-bottom: 10px;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
     }
     
     .service-cena {
-        color: #666;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .gallery {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 15px;
     }
 
     .mapa-kontejner {
-        height: 400px;
-        width: 100%;
+        height: 300px;
     }
 
     .recenze {
-        padding: 30px 0;
-        background-color: #FFDAB9;
-        overflow: hidden;
-    }
-
-    .recenze-container {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .recenze-slider {
-        display: flex;
-        transition: transform 0.3s ease;
-        width: 100%;
+        padding: 25px 0;
     }
 
     .recenze-item {
-        flex: 0 0 100%;
-        width: 100%;
-        text-align: center;
-        padding: 20px;
+        padding: 15px;
     }
 
     .recenze-content {
-        background: white;
-        border-radius: 8px;
-        padding: 20px;
-        margin: 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 15px;
+    }
 
     .rating {
-        font-size: 16px;
-        margin-bottom: 10px;
+        font-size: 14px;
     }
 
     .recenze-text {
-        font-size: 14px;
-        margin: 10px 0;
+        font-size: 13px;
     }
 
-    .recenze-footer {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .recenze-autor {
-        font-size: 14px;
-    }
-
-    .recenze-cas {
+    .recenze-autor, .recenze-cas {
         font-size: 12px;
     }
 
-    .recenze-dots {
-        margin-top: 20px;
-    }
-
+    .smerovac {
+        bottom: 60px;
     }
 }
