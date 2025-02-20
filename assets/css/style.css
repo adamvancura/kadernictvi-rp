@@ -565,9 +565,9 @@ body {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: white; /* Nastavení bílé barvy pozadí */
+        background-color: white;
         padding: 20px 0;
-        text-align: center; /* Zarovnání textu na střed */
+        text-align: center;
     }
 
     .navbar-links.active {
@@ -575,11 +575,11 @@ body {
     }
 
     .navbar-links li {
-        margin: 10px 0; /* Mezera mezi položkami menu */
+        margin: 10px 0;
     }
 
     .navbar-links a {
-        color: #333; /* Nastavení barvy textu */
+        color: #333;
         font-size: 18px;
         text-decoration: none;
     }
