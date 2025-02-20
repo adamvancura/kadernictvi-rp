@@ -95,6 +95,13 @@ document.addEventListener('keydown', function (event) {
 });
 
 
+galleryModal.addEventListener('click', function (event) {
+    if (event.target === galleryModal && window.innerWidth <= 480) {
+        closeGallery();
+    }
+});
+
+
 /*recenze*/
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.recenze-slider');
