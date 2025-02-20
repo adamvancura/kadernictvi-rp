@@ -12,6 +12,22 @@ body {
     overflow: hidden;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -607,6 +623,7 @@ body {
     }
     
 }
+
 
 
 @media screen and (max-width: 480px) {
