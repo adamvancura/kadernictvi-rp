@@ -87,6 +87,14 @@ nextBtn.addEventListener('click', () => {
 });
 
 
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        galleryModal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
+});
+
+
 /*recenze*/
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.recenze-slider');
