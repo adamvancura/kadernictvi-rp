@@ -137,8 +137,8 @@ body {
 }
 
 .rezervace-btn:hover {
-    color: white; /* Zvýraznění textu */
-    background-color: #E07A4A; /* Mírně tmavší barva pozadí při najetí */
+    color: white;
+    background-color: #E07A4A;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -554,8 +554,12 @@ body {
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .mapa-kontejner {
+        height: 100px;
     }
 
     .recenze-container {
@@ -586,7 +590,12 @@ body {
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .mapa-kontejner {
+        height: 300px;
     }
 }
 
@@ -615,6 +624,20 @@ body {
         color: #F8AB81;
     }
     
+    .close-gallery {
+        top: 80px;
+        right: 60px;
+    }
+
+    .zavreni-galerie {
+        font-size: 24px;
+        padding: 8px 16px;
+    }
+
+    .modal-img {
+        max-height: 60%;
+    }
+
     .header-subtitle {
         font-size: 1.2rem;
     }

@@ -94,11 +94,23 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+/*Galerie mobil*/
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryModal = document.getElementById('gallery-modal');
+    const closeButton = document.querySelector('.zavreni-galerie');
 
-galleryModal.addEventListener('click', function (event) {
-    if (event.target === galleryModal && window.innerWidth <= 480) {
-        closeGallery();
+    function closeGallery() {
+        galleryModal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     }
+
+    closeButton.addEventListener('click', closeGallery);
+
+    galleryModal.addEventListener('click', function(event) {
+        if (event.target === galleryModal && window.innerWidth <= 480) {
+            closeGallery();
+        }
+    });
 });
 
 
