@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezervace</title>
+    <title>O nás - LuhaStyle</title>
     <link rel="stylesheet" href="assets/css/rezervation.css">
 </head>
 <body>
-    <label for="">Jmeno</label>
-    <input type="text">
+    <header class="reservation-header">
+        <nav class="reservation-nav">
+            <a href="#services">Služby</a>
+            <a href="#reviews">Recenze</a>
+            <a href="#about">O nás</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <h2>O nás</h2>
+            
+            <div class="slogan">
+                <h3>Slogan</h3>
+                <p>Moje tvořivost je kvalita, kterou vkládám do své činnosti.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="address">
+                    <h3>Adresa</h3>
+                    <iframe style="border:none" src="https://frame.mapy.cz/s/ladarusera" width="750" height="600" frameborder="0"></iframe>
+                    <p>U Trezorky 2, Praha 5</p>
+                    <a href="#" class="map-link">Vyhledání trasy</a>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-info">
+                        <h3>Kontaktní údaje</h3>
+                        <p><a href="tel:+420737814810">+420 737 814 810</a></p>
+                        <p><a href="#">Webová stránka</a></p>
+                    </div>
+                    <div class="opening-hours">
+                        <h3>Otevírací doba</h3>
+                        <ul>
+                            <li>Pondělí: 11:00 – 21:00</li>
+                            <li>Úterý: 11:00 – 21:00</li>
+                            <li>Středa: 11:00 – 21:00</li>
+                            <li>Čtvrtek: 11:00 – 21:00</li>
+                            <li>Pátek: 11:00 – 21:00</li>
+                            <li>Sobota: Zavřeno</li>
+                            <li>Neděle: Zavřeno</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="reservation-footer">
+        &copy; 2025 Kadeřnictví LuhaStyle
+    </footer>
 </body>
 </html>
