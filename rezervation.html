@@ -23,7 +23,7 @@
             </nav>
         </header>
         
-        <main>
+        <div id="step1" class="step active">
             <div id="services" class="services-container">
                 <h2>Vyberte službu</h2>
                 <div class="services">
@@ -56,94 +56,150 @@
                 </div>
             </div>
             
-            <div id="calendar-section" class="calendar-container hidden">
+            <section id="cenik" class="section-container">
+                <h2>Ceník</h2>
+                <div class="cenik-content">
+                    <div class="cenik-item">
+                        <h3>Střih</h3>
+                        <p class="price">200 Kč</p>
+                    </div>
+                    <div class="cenik-item">
+                        <h3>Foukaná</h3>
+                        <p class="price">300 Kč</p>
+                    </div>
+                    <div class="cenik-item">
+                        <h3>Střih+foukaná</h3>
+                        <p class="price">550 Kč</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="kontakt" class="section-container">
+                <h2>O nás</h2>
+                <div class="kontakt-content">
+                    <div class="kontakt-info">
+                        <div class="slogan">
+                            <h3>Slogan</h3>
+                            <p>Každý účes vypráví příběh - nechte ten svůj zářit dokonalostí.</p>
+                        </div>
+                        <div class="adresa">
+                            <h3>Adresa</h3>
+                            <p>Družstevní 876,
+                                763 26 Luhačovice</p>
+                            <a href="#" class="vyhledani-trasy">
+                                <i class="fas fa-map-marker-alt"></i> Vyhledání trasy
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="kontaktni-udaje">
+                        <h3>Kontaktní údaje</h3>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+420737814810">+420 737 814 810</a></p>
+                        <p><i class="fas fa-globe"></i> <a href="https://www.luhastyle.cz" target="_blank">Webová stránka</a></p>
+                    </div>
+
+                    <div class="oteviraci-doba">
+                        <h3>Otevírací doba</h3>
+                        <div class="doba-item">
+                            <span>Pondělí</span>
+                            <span>11:00 - 21:00</span>
+                        </div>
+                        <div class="doba-item">
+                            <span>Úterý</span>
+                            <span>11:00 - 21:00</span>
+                        </div>
+                        <div class="doba-item">
+                            <span>Středa</span>
+                            <span>11:00 - 21:00</span>
+                        </div>
+                        <div class="doba-item">
+                            <span>Čtvrtek</span>
+                            <span>11:00 - 21:00</span>
+                        </div>
+                        <div class="doba-item">
+                            <span>Pátek</span>
+                            <span>11:00 - 21:00</span>
+                        </div>
+                        <div class="doba-item">
+                            <span>Sobota</span>
+                            <span>Zavřeno</span>
+                        </div>
+                        <div class="doba-item">
+                            <span>Neděle</span>
+                            <span>Zavřeno</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="step2" class="step">
+            <div class="rezervace-header">
+                <a href="#" class="zpet-btn" id="back-to-step1"><i class="fas fa-arrow-left"></i> Zpět</a>
                 <h2>Vyberte termín</h2>
-                <div class="date-selector">
-                    <button class="date-nav prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="current-month">Červen 2023</div>
-                    <button class="date-nav next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="rezervace-obsah">
+                <div class="kalendar-container">
+                    <div class="datum-cas">
+                        <h3>Datum a čas</h3>
+                        <div class="kalendar-navigace">
+                            <button class="mesic-nav prev"><i class="fas fa-chevron-left"></i></button>
+                            <div class="aktualni-mesic">Březen 2025</div>
+                            <button class="mesic-nav next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="kalendar">
+                            <div class="dny-tydne">
+                                <div>Po</div>
+                                <div>Út</div>
+                                <div>St</div>
+                                <div>Čt</div>
+                                <div>Pá</div>
+                                <div>So</div>
+                                <div>Ne</div>
+                            </div>
+                            <div class="dny-mesice">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dostupne-casy">
+                        <h3>Dostupné časy</h3>
+                        <div class="casy">
+                            <button class="cas-slot">9:00</button>
+                            <button class="cas-slot">10:00</button>
+                            <button class="cas-slot">11:30</button>
+                            <button class="cas-slot">13:00</button>
+                            <button class="cas-slot">14:30</button>
+                            <button class="cas-slot">16:00</button>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="kalendar">
-                    <div class="weekdny">
-                        <div>Po</div>
-                        <div>Út</div>
-                        <div>St</div>
-                        <div>Čt</div>
-                        <div>Pá</div>
-                        <div>So</div>
-                        <div>Ne</div>
-                    </div>
-                    <div class="dny">
-                    </div>
-                </div>
-                
-                <div class="time-slots">
-                    <h3>Dostupné časy</h3>
-                    <div class="slots">
-                        <button class="time-slot">9:00</button>
-                        <button class="time-slot">10:00</button>
-                        <button class="time-slot">11:30</button>
-                        <button class="time-slot">13:00</button>
-                        <button class="time-slot">14:30</button>
-                        <button class="time-slot">16:00</button>
+                <div class="souhrn">
+                    <h3>Souhrn</h3>
+                    <div class="souhrn-obsah">
+                        <div class="salon-info">
+                            <img src="assets/images/kadernicee.jpg" alt="Kadeřnictví" class="salon-obrazek">
+                            <div class="salon-detaily">
+                                <h4>LuhaStyle</h4>
+                                <p>Družstevní 876, 763 26 Luhačovice</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="vybrana-sluzba">
+                            <h4 id="nazev-vybrane-sluzby">Střih+foukaná</h4>
+                            <p id="doba-vybrane-sluzby">45 min</p>
+                        </div>
+                        
+                        <button id="tlacitko-pokracovat" class="tlacitko-pokracovat">POKRAČOVAT</button>
                     </div>
                 </div>
             </div>
-        </main>
-        
-        <section id="cenik" class="section-container">
-            <h2>Ceník</h2>
-            <div class="cenik-content">
-                <div class="cenik-item">
-                    <h3>Střih</h3>
-                    <p class="price">200 Kč</p>
-                </div>
-                <div class="cenik-item">
-                    <h3>Foukaná</h3>
-                    <p class="price">300 Kč</p>
-                </div>
-                <div class="cenik-item">
-                    <h3>Střih+foukaná</h3>
-                    <p class="price">550 Kč</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="kontakt" class="section-container">
-            <h2>Kontakt</h2>
-            <div class="kontakt-content">
-                <div class="kontakt-info">
-                    <div class="kontakt-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Kadeřnictví LuhaStyle<br>Hlavní 123<br>760 01 Zlín</p>
-                    </div>
-                    <div class="kontakt-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+420 123 456 789</p>
-                    </div>
-                    <div class="kontakt-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>info@luhastyle.cz</p>
-                    </div>
-                </div>
-                <div class="oteviraci-doba">
-                    <h3>Otevírací doba</h3>
-                    <div class="doba-item">
-                        <span>Pondělí - Pátek:</span>
-                        <span>9:00 - 18:00</span>
-                    </div>
-                    <div class="doba-item">
-                        <span>Sobota:</span>
-                        <span>9:00 - 12:00</span>
-                    </div>
-                    <div class="doba-item">
-                        <span>Neděle:</span>
-                        <span>Zavřeno</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </div>
     
     <script src="assets/scripts/rezervation.js"></script>
