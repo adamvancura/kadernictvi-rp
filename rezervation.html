@@ -16,15 +16,15 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Rezervace</a></li>
-                    <li><a href="#">Ceník</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#services" class="active">Rezervace</a></li>
+                    <li><a href="#cenik">Ceník</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
         </header>
         
         <main>
-            <div class="services-container">
+            <div id="services" class="services-container">
                 <h2>Vyberte službu</h2>
                 <div class="services">
                     <div class="service-card">
@@ -33,7 +33,7 @@
                             <p class="duration">30 min</p>
                             <p class="price">200 Kč</p>
                         </div>
-                        <button class="reserve-btn">Rezervovat</button>
+                        <button class="reserve-btn" data-service="Střih">Rezervovat</button>
                     </div>
                     
                     <div class="service-card">
@@ -42,7 +42,7 @@
                             <p class="duration">30 min</p>
                             <p class="price">300 Kč</p>
                         </div>
-                        <button class="reserve-btn">Rezervovat</button>
+                        <button class="reserve-btn" data-service="Foukaná">Rezervovat</button>
                     </div>
                     
                     <div class="service-card">
@@ -51,12 +51,12 @@
                             <p class="duration">45 min</p>
                             <p class="price">550 Kč</p>
                         </div>
-                        <button class="reserve-btn">Rezervovat</button>
+                        <button class="reserve-btn" data-service="Střih+foukaná">Rezervovat</button>
                     </div>
                 </div>
             </div>
             
-            <div class="calendar-container">
+            <div id="calendar-section" class="calendar-container hidden">
                 <h2>Vyberte termín</h2>
                 <div class="date-selector">
                     <button class="date-nav prev"><i class="fas fa-chevron-left"></i></button>
@@ -90,7 +90,62 @@
                     </div>
                 </div>
             </div>
-        </div>    
-    </main>
+        </main>
+        
+        <section id="cenik" class="section-container">
+            <h2>Ceník</h2>
+            <div class="cenik-content">
+                <div class="cenik-item">
+                    <h3>Střih</h3>
+                    <p class="price">200 Kč</p>
+                </div>
+                <div class="cenik-item">
+                    <h3>Foukaná</h3>
+                    <p class="price">300 Kč</p>
+                </div>
+                <div class="cenik-item">
+                    <h3>Střih+foukaná</h3>
+                    <p class="price">550 Kč</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="kontakt" class="section-container">
+            <h2>Kontakt</h2>
+            <div class="kontakt-content">
+                <div class="kontakt-info">
+                    <div class="kontakt-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Kadeřnictví LuhaStyle<br>Hlavní 123<br>760 01 Zlín</p>
+                    </div>
+                    <div class="kontakt-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+420 123 456 789</p>
+                    </div>
+                    <div class="kontakt-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@luhastyle.cz</p>
+                    </div>
+                </div>
+                <div class="oteviraci-doba">
+                    <h3>Otevírací doba</h3>
+                    <div class="doba-item">
+                        <span>Pondělí - Pátek:</span>
+                        <span>9:00 - 18:00</span>
+                    </div>
+                    <div class="doba-item">
+                        <span>Sobota:</span>
+                        <span>9:00 - 12:00</span>
+                    </div>
+                    <div class="doba-item">
+                        <span>Neděle:</span>
+                        <span>Zavřeno</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="assets/scripts/rezervation.js"></script>
 </body>
 </html>
