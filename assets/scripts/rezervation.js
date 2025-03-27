@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentMonthDisplay = document.querySelector('.aktualni-mesic');
   const prevMonthBtn = document.querySelector('.mesic-nav.prev');
   const nextMonthBtn = document.querySelector('.mesic-nav.next');
-  const timeSlotsContainer = document.querySelector('.time-slots'); // Kontejner pro časy
-  const selectedDateDisplay = document.getElementById('selected-date'); // Zobrazení vybraného dne
+  const timeSlotsContainer = document.querySelector('.time-slots');
+  const selectedDateDisplay = document.getElementById('selected-date');
 
   let currentDate = new Date();
 
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
           const dayBtn = document.createElement('button');
           dayBtn.textContent = day;
 
-          // Zvýraznění dnešního dne
           if (
               day === new Date().getDate() &&
               month === new Date().getMonth() &&
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
               dayBtn.classList.add('today');
           }
 
-          // Kliknutí na den
           dayBtn.addEventListener('click', () => selectDate(year, month, day));
           calendarDays.appendChild(dayBtn);
       }
@@ -53,23 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
   function selectDate(year, month, day) {
       const selectedDate = new Date(year, month, day);
 
-      // Zobrazení vybraného dne
       selectedDateDisplay.textContent = `Vybraný den: ${selectedDate.toLocaleDateString('cs-CZ')}`;
-      
-      // Zobrazení časových slotů
       timeSlotsContainer.classList.remove('hidden');
   }
 
   prevMonthBtn.addEventListener('click', () => {
       currentDate.setMonth(currentDate.getMonth() - 1);
       renderCalendar();
-      timeSlotsContainer.classList.add('hidden'); // Skrytí časových slotů při změně měsíce
+      timeSlotsContainer.classList.add('hidden');
   });
 
   nextMonthBtn.addEventListener('click', () => {
       currentDate.setMonth(currentDate.getMonth() + 1);
       renderCalendar();
-      timeSlotsContainer.classList.add('hidden'); // Skrytí časových slotů při změně měsíce
+      timeSlotsContainer.classList.add('hidden');
   });
 
   reserveBtns.forEach(btn => {
