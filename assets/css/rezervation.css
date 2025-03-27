@@ -368,7 +368,7 @@ h2 {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -477,7 +477,8 @@ h2 {
 
 .souhrn h3 {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .salon-info, .personal-dostupny {
