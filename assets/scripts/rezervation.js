@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       calendarDays.innerHTML = '';
 
-      for (let i = 0; i < firstDayOfMonth; i++) {
+      for (let i = 1; i < firstDayOfMonth; i++) {
           calendarDays.appendChild(document.createElement('div'));
       }
 
