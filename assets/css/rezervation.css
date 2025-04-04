@@ -29,12 +29,13 @@ header {
 .nadpis-container {
     display: flex;
     align-items: center;
-}
-
-h1 {
     font-size: 24px;
     font-weight: 600;
-    color: #333;
+    color: #404040;
+}
+
+.nadpis-container:hover {
+    color: #606060;
 }
 
 nav ul {
