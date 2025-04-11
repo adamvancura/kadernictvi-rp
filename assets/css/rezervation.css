@@ -103,6 +103,17 @@ nav a.active, nav a:hover {
     color: #666;
 }
 
+.current-day {
+    font-weight: bold;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 4px;
+    padding: 2px 5px;
+  }
+  
+  .open-status {
+    margin-left: 10px;
+  }
+
 .reserve-btn {
     background-color: #3498db;
     color: white;
