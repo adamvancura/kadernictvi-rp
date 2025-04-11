@@ -11,7 +11,8 @@
 <body>
     <div class="container">
         <header>
-            <div class="nadpis-container"><p>LuhaStyle</p>
+            <div class="nadpis-container">
+                <h1>LuhaStyle</h1>
             </div>
             <nav>
                 <ul>
@@ -67,7 +68,7 @@
                             <h3>Adresa</h3>
                             <p>Družstevní 876,
                                 763 26 Luhačovice</p>
-                            <a href="https://mapy.cz/zakladni?q=Dru%C5%BEstevn%C3%AD%20876%2C%20763%2026%20Luha%C4%8Dovice&source=addr&id=9490501&ds=1&x=17.7387289&y=49.0951451&z=17" class="vyhledani-trasy">
+                            <a href="https://mapy.cz/zakladni?source=muni&id=3072&ds=1&x=17.7561593&y=49.1043199&z=12" class="vyhledani-trasy">
                                 <i class="fas fa-map-marker-alt"></i> Vyhledání trasy
                             </a>
                         </div>
@@ -124,14 +125,14 @@
                 <div class="kalendar-container">
                     <div class="datum-cas">
                         <h3>Datum a čas</h3>
-                        <div class="kalendar-navigace">
-                            <button class="mesic-nav prev"><i class="fas fa-chevron-left"></i></button>
-                            <div class="aktualni-mesic">Březen 2025</div>
-                            <button class="mesic-nav next"><i class="fas fa-chevron-right"></i></button>
-                        </div>
+                       
                         
-                    
-                        <input type="date" min="2025-03-28">
+                        <div class="kalendar">
+                            <div class="date-picker-container">
+                                <input type="date" min="2025-03-27" class="styled-date-picker">
+                            </div>
+                            
+                        </div>
                     </div>
                     
                     <div id="time-slots-container" class="time-slots hidden">
@@ -146,6 +147,7 @@
                         </div>
                      </div>
                 
+                    
                 <div class="souhrn">
                     <h3>Souhrn</h3>
                     <div class="souhrn-obsah">
