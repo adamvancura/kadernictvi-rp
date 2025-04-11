@@ -1,16 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const reserveBtns = document.querySelectorAll('.reserve-btn');
-  const backBtn = document.getElementById('back-to-step1');
-  const step1 = document.getElementById('step1');
-  const step2 = document.getElementById('step2');
-  const serviceNameElement = document.getElementById('nazev-vybrane-sluzby');
-  const serviceDurationElement = document.getElementById('doba-vybrane-sluzby');
-  const calendarDays = document.querySelector('.dny-mesice');
-  const currentMonthDisplay = document.querySelector('.aktualni-mesic');
-  const prevMonthBtn = document.querySelector('.mesic-nav.prev');
-  const nextMonthBtn = document.querySelector('.mesic-nav.next');
-  const timeSlotsContainer = document.querySelector('.time-slots');
-  const selectedDateDisplay = document.getElementById('selected-date');
+document.addEventListener("DOMContentLoaded", function () {
+    const reserveBtns = document.querySelectorAll(".reserve-btn");
+    const backBtn = document.getElementById("back-to-step1");
+    const step1 = document.getElementById("step1");
+    const step2 = document.getElementById("step2");
+    const serviceNameElement = document.getElementById("nazev-vybrane-sluzby");;
 
   let currentDate = new Date();
 

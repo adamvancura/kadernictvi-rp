@@ -34,6 +34,40 @@ header {
     color: #404040;
 }
 
+.date-picker-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .styled-date-picker {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .styled-date-picker:hover {
+    border-color: #007bff;
+  }
+  
+  .styled-date-picker:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .styled-date-picker::-webkit-calendar-picker-indicator {
+    filter: invert(40%);
+    cursor: pointer;
+  }
+
 .nadpis-container:hover {
     color: #606060;
 }
@@ -545,3 +579,115 @@ h2 {
 .tlacitko-pokracovat:hover {
     background-color: #2980b9;
 }
+
+@media (max-width: 768px) {
+    .oteviraci-doba h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .doba-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 16px;
+    }
+    
+    .current-day {
+      background-color: rgba(52, 152, 219, 0.2);
+      font-weight: bold;
+    }
+    
+    .open-status {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .call-button, .navigate-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      text-align: center;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .o-nas-container {
+        padding: 15px;
+      }
+      
+      .o-nas-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .slogan, .adresa, .kontaktni-udaje, .oteviraci-doba {
+        margin-bottom: 20px;
+      }
+      
+      .oteviraci-doba h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      
+      .open-status {
+        display: block;
+        color: #e74c3c;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      
+      .doba-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .doba-item span:first-child {
+        margin-right: 10px;
+      }
+      
+      .current-day {
+        background-color: rgba(52, 152, 219, 0.2);
+        border-radius: 4px;
+        padding: 2px 5px;
+      }
+      
+      .phone-number {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      .call-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 15px;
+      }
+      
+      .navigate-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        padding: 10px;
+        background-color: #2ecc71;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+  }
