@@ -35,7 +35,7 @@ reserveBtns.forEach(btn => {
       }
   });
 
-  // --- Výběr data a času ---
+  //Výběr data a času
   const datePicker = document.getElementById('date-picker');
   const timeSlotsContainer = document.getElementById('time-slots-container');
   const timeSlotButtons = document.querySelectorAll('.time-slot');
