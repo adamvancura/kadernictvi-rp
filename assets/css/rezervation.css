@@ -632,6 +632,23 @@ h2 {
       margin-bottom: 10px;
     }
     
+    .o-nas-flex {
+        display: block;
+        padding: 0;
+      }
+      .o-nas-flex div {
+        width: 100%;
+        margin-bottom: 18px;
+        padding: 0;
+      }
+      
+      .o-nas-flex,
+      .o-nas-flex div,
+      .oteviraci-doba {
+        font-size: 1.07em;
+        line-height: 1.5;
+      }
+    
     .doba-item {
       display: flex;
       justify-content: space-between;
@@ -735,5 +752,12 @@ h2 {
         text-decoration: none;
         border-radius: 5px;
         margin-top: 10px;
+      }
+
+      .rezervace-obsah {
+        grid-template-columns: 1fr;
+      }
+      .souhrn {
+        margin-top: 15px;
       }
   }
