@@ -119,33 +119,38 @@
                 <a href="#" class="zpet-btn" id="back-to-step1"><i class="fas fa-arrow-left"></i> Zpět</a>
                 <h2>Vyberte termín</h2>
             </div>
-            
             <div class="rezervace-obsah">
                 <div class="kalendar-container">
                     <div class="datum-cas">
                         <h3>Datum a čas</h3>
-                        <div class="kalendar-navigace">
-                            <button class="mesic-nav prev"><i class="fas fa-chevron-left"></i></button>
-                            <div class="aktualni-mesic">Březen 2025</div>
-                            <button class="mesic-nav next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="date-picker-container">
+                            <input id="date-picker" class="styled-date-picker" type="date" min="2025-04-22" required>
                         </div>
-                        
-                    
-                        <input type="date" min="2025-03-28">
+                        <div id="time-slots-container" class="time-slots hidden">
+                            <h3 id="selected-date">Vyberte čas</h3>
+                            <div class="time-slots-list">
+                                <button class="time-slot">9:00</button>
+                                <button class="time-slot">10:00</button>
+                                <button class="time-slot">11:30</button>
+                                <button class="time-slot">13:00</button>
+                                <button class="time-slot">14:30</button>
+                                <button class="time-slot">16:00</button>
+                            </div>
+                        </div>
+                        <form id="reservation-form" class="hidden" autocomplete="off" style="margin-top:20px;">
+                            <div class="form-row">
+                                <input type="text" id="name" placeholder="Jméno" required>
+                                <input type="text" id="surname" placeholder="Příjmení" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" id="phone" placeholder="Telefon" required pattern="^[0-9 +()-]{9,16}$">
+                                <input type="email" id="email" placeholder="E-mail" required>
+                            </div>
+                            <div class="error-msg" id="error-msg" style="display:none;"></div>
+                            <button type="submit" class="tlacitko-pokracovat" style="margin-top:10px;">Odeslat rezervaci</button>
+                        </form>
                     </div>
-                    
-                    <div id="time-slots-container" class="time-slots hidden">
-                        <h3 id="selected-date">Vyberte čas</h3>
-                        <div class="time-slots-list">
-                           <button class="time-slot">9:00</button>
-                           <button class="time-slot">10:00</button>
-                           <button class="time-slot">11:30</button>
-                           <button class="time-slot">13:00</button>
-                           <button class="time-slot">14:30</button>
-                           <button class="time-slot">16:00</button>
-                        </div>
-                     </div>
-                
+                </div>
                 <div class="souhrn">
                     <h3>Souhrn</h3>
                     <div class="souhrn-obsah">
@@ -156,19 +161,15 @@
                                 <p>Družstevní 876, 763 26 Luhačovice</p>
                             </div>
                         </div>
-                        
-                        
                         <div class="vybrana-sluzba">
                             <h4 id="nazev-vybrane-sluzby">Střih+foukaná</h4>
                             <p id="doba-vybrane-sluzby">45 min</p>
                         </div>
-                        
                         <button id="tlacitko-pokracovat" class="tlacitko-pokracovat">POKRAČOVAT</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>        
     
     <script src="assets/scripts/rezervation.js"></script>
 </body>

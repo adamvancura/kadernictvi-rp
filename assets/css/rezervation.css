@@ -580,6 +580,77 @@ h2 {
     background-color: #2980b9;
 }
 
+
+.date-picker-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.styled-date-picker {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+}
+.styled-date-picker:hover, .styled-date-picker:focus {
+    border-color: #3498db;
+}
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.form-row input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #d4d6db;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f9f9fb;
+}
+.form-row input:focus {
+    border-color: #3498db;
+    outline: none;
+    background: #fff;
+}
+.error-msg {
+    color: #e11d48;
+    background: #fef2f2;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 0.97rem;
+}
+.time-slots-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+.time-slot {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+.time-slot.selected {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+.time-slots.hidden {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .oteviraci-doba h3 {
       font-size: 20px;
