@@ -526,7 +526,7 @@ h2 {
   margin-bottom: 5px;
 }
 
-.tlacitko-pokracovat {
+.tlacitko-odeslat-rezervaci {
   background-color: #3498db;
   color: white;
   border: none;
@@ -541,7 +541,7 @@ h2 {
   width: 100%;
 }
 
-.tlacitko-pokracovat:hover {
+.tlacitko-odeslat-rezervaci {
   background-color: #2980b9;
 }
 
