@@ -35,8 +35,11 @@ reserveBtns.forEach(btn => {
       }
   });
 
-  //Výběr data a času
+  //Funkce pro aby jsme nemuseli každý den lozit do HTML a měnit datum pro kalendář(aby se nemohl zarezervovat den, který už proběhl)
+  // Tato funkce to dělá dynamicky
   const datePicker = document.getElementById('date-picker');
+  datePicker.min = new Date().toISOString().split('T')[0];
+
   const timeSlotsContainer = document.getElementById('time-slots-container');
   const timeSlotButtons = document.querySelectorAll('.time-slot');
   const selectedDateDisplay = document.getElementById('selected-date');
