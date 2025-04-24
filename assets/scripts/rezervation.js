@@ -156,6 +156,8 @@ reserveBtns.forEach(btn => {
           }
       });
   }
+
+
   function checkIfOpen() {
       const now = new Date();
       const hours = now.getHours();
@@ -163,8 +165,11 @@ reserveBtns.forEach(btn => {
       if (day === 0 || day === 6) {
           return false;
       }
+
       return hours >= 11 && hours < 21;
   }
+
+
   function addOpenStatus() {
       const oteviraci = document.querySelector('.oteviraci-doba h3');
       const isOpen = checkIfOpen();
