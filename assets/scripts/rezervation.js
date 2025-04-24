@@ -52,7 +52,7 @@ reserveBtns.forEach(btn => {
       const day = new Date(this.value).getDay();
       if ([0, 6].includes(day)) {
           this.value = '';
-          showError('Víkendy nejsou povoleny. Vyberte prosím pracovní den.');
+          showError("Víkendy máme volno. Vyberte prosím pracovní den.");
           timeSlotsContainer.classList.add('hidden');
           reservationForm.classList.add('hidden');
       } else if (this.value) {
