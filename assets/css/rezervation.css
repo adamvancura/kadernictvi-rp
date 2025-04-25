@@ -717,12 +717,6 @@ h2 {
         margin-right: 10px;
       }
       
-      .current-day {
-        background-color: rgba(52, 152, 219, 0.2);
-        border-radius: 4px;
-        padding: 2px 5px;
-      }
-      
       .phone-number {
         display: block;
         margin-bottom: 10px;

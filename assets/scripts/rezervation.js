@@ -136,26 +136,6 @@ reserveBtns.forEach(btn => {
       }
   });
 
-  function highlightCurrentDay() {
-      const today = new Date().getDay();
-      const daysMap = {
-          1: 'Pondělí',
-          2: 'Úterý',
-          3: 'Středa',
-          4: 'Čtvrtek',
-          5: 'Pátek',
-          6: 'Sobota',
-          0: 'Neděle'
-      };
-      const todayName = daysMap[today];
-      const dobaItems = document.querySelectorAll('.doba-item');
-      dobaItems.forEach(item => {
-          const dayName = item.querySelector('span:first-child').textContent;
-          if (dayName === todayName) {
-              item.classList.add('current-day');
-          }
-      });
-  }
 
 
   function checkIfOpen() {
@@ -181,6 +161,6 @@ reserveBtns.forEach(btn => {
       statusElement.style.fontWeight = 'normal';
       oteviraci.appendChild(statusElement);
   }
-  highlightCurrentDay();
+  
   addOpenStatus();
 });
