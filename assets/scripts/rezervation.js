@@ -127,6 +127,7 @@ reserveBtns.forEach(btn => {
       e.preventDefault();
       showAboutUs();
   });
+  
   document.querySelector('.vyhledani-trasy').addEventListener('click', function(e) {
       if (confirm('Budete přesměrováni na Mapy.cz. Chcete pokračovat?')) {
           return true;
