@@ -765,4 +765,38 @@ h2 {
       .souhrn {
         margin-top: 15px;
       }
+
+      .kontakt-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .kontakt-info,
+      .kontaktni-udaje,
+      .oteviraci-doba {
+        margin-bottom: 0;
+        padding: 0 2px;
+      }
+      .kontaktni-udaje p,
+      .adresa p,
+      .slogan p {
+        font-size: 1.08em;
+        margin-bottom: 8px;
+      }
+      .vyhledani-trasy {
+        margin-top: 6px;
+        font-size: 1.1em;
+      }
+      .oteviraci-doba {
+        margin-top: 10px;
+      }
+      .doba-item {
+        font-size: 1.08em;
+        padding: 6px 0;
+      }
+      .oteviraci-doba h3 {
+        text-align: left;
+        font-size: 1.15em;
+        margin-bottom: 8px;
+      }
   }
