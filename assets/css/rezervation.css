@@ -766,30 +766,40 @@ h2 {
         margin-top: 15px;
       }
 
+      .zpet-btn {
+        font-size: 15px;
+        padding-bottom: 15px;
+      }
+
       .kontakt-content {
         display: flex;
         flex-direction: column;
         gap: 24px;
       }
+
       .kontakt-info,
       .kontaktni-udaje,
       .oteviraci-doba {
         margin-bottom: 0;
         padding: 0 2px;
       }
+
       .kontaktni-udaje p,
       .adresa p,
       .slogan p {
         font-size: 1.08em;
         margin-bottom: 8px;
       }
+
       .vyhledani-trasy {
         margin-top: 6px;
         font-size: 1.1em;
       }
+
       .oteviraci-doba {
         margin-top: 10px;
       }
+
       .doba-item {
         font-size: 1.08em;
         padding: 6px 0;
@@ -799,4 +809,133 @@ h2 {
         font-size: 1.15em;
         margin-bottom: 8px;
       }
+
+      .rezervace-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        padding-top: 10px;
+      }
+
+      .rezervace-header h2 {
+        font-size: 1.18em;
+        margin-bottom: 12px;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .kalendar-container {
+        padding: 0;
+        margin-bottom: 0;
+        box-shadow: none;
+        border-radius: 0;
+        background: transparent;
+      }
+
+      .datum-cas h3 {
+        font-size: 1.08em;
+        margin-bottom: 8px;
+        text-align: left;
+      }
+      .date-picker-container {
+        margin-bottom: 12px;
+      }
+
+      .styled-date-picker {
+        width: 100%;
+        font-size: 1.08em;
+        padding: 14px 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background: #fafbfc;
+      }
+
+      .time-slots-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 0 0 16px 0;
+      }
+
+      .time-slot {
+        width: 100%;
+        font-size: 1.12em;
+        padding: 15px 0;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        background: #fff;
+        margin-bottom: 0;
+      }
+
+      .time-slot.selected {
+        background-color: #3498db !important;
+        color: #fff !important;
+        border-color: #3498db !important;
+        font-weight: bold;
+      }
+
+      .time-slot:disabled {
+        background: #e0e0e0 !important;
+        color: #aaa !important;
+        cursor: not-allowed !important;
+        border: 1px solid #ccc !important;
+        text-decoration: line-through !important;
+        pointer-events: none !important;
+        opacity: 1 !important;
+      }
+
+      .form-row {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .form-row input {
+        font-size: 1.08em;
+        padding: 14px 10px;
+        border-radius: 8px;
+        background: #f9f9fb;
+      }
+
+      .tlacitko-odeslat-rezervaci {
+        font-size: 1.08em;
+        padding: 16px;
+        margin-top: 14px;
+        border-radius: 8px;
+        width: 100%;
+      }
+
+      .souhrn {
+        margin-top: 20px;
+        padding: 14px 10px;
+        background: #f9f9fb;
+        border-radius: 10px;
+        box-shadow: 0 1px 6px #0001;
+      }
+
+      .souhrn h3 {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .salon-info {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .salon-obrazek {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .vybrana-sluzba {
+        padding-top: 8px;
+      }
   }
+
+  
