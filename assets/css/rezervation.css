@@ -344,6 +344,17 @@ h2 {
   color: #666;
 }
 
+.time-slot:disabled,
+.time-slot.obsazeno:disabled {
+  background: #e0e0e0 !important;
+  color: #aaa !important;
+  cursor: not-allowed !important;
+  border: 1px solid #ccc !important;
+  text-decoration: line-through !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+}
+
 .selected-service {
   border-top: 1;
 }

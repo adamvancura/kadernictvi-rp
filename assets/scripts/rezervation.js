@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceNameElement = document.getElementById('nazev-vybrane-sluzby');
     const serviceDurationElement = document.getElementById('doba-vybrane-sluzby');
 
-    // Funkce pro přepínání kroků
     reserveBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const serviceName = this.getAttribute('data-service');
@@ -51,7 +50,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedDate = '';
     let selectedTime = '';
 
-    datePicker.addEventListener('input', function() {
+    // Pomocná funkce na převod času na formát HH:MM
+    function formatToHHMM(cas) {
+        return cas.split(':').slice(0,2).join(':');
+    }
+
+    // Funkce pro získání obsazených časů pro zvolené datum
+    async function getObsazeneCasy(datum) {
+        const { data, error } = await supabase
+            .from('Rezervace')
+            .select('cas')
+            .eq('datum', datum);
+        if (error) {
+            console.error('Chyba při získávání obsazených časů:', error);
+            return [];
+        }
+        return data.map(r => r.cas);
+    }
+
+    datePicker.addEventListener('input', async function() {
         const day = new Date(this.value).getDay();
         if ([0, 6].includes(day)) {
             this.value = '';
@@ -66,6 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
             reservationForm.classList.add('hidden');
             selectedTime = '';
             document.querySelectorAll('.time-slot.selected').forEach(el => el.classList.remove('selected'));
+
+            // Zjisti obsazené časy pro vybrané datum a uprav tlačítka
+            const obsazeneCasy = await getObsazeneCasy(selectedDate);
+            const obsazeneCasyFormated = obsazeneCasy.map(formatToHHMM);
+
+            timeSlotButtons.forEach(btn => {
+                const btnCas = btn.textContent.trim();
+                if (obsazeneCasyFormated.includes(btnCas)) {
+                    btn.disabled = true;
+                    btn.classList.add('obsazeno');
+                } else {
+                    btn.disabled = false;
+                    btn.classList.remove('obsazeno');
+                }
+            });
         } else {
             timeSlotsContainer.classList.add('hidden');
             reservationForm.classList.add('hidden');
@@ -74,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     timeSlotButtons.forEach(btn => {
         btn.addEventListener('click', function() {
+            if (btn.disabled) return;
             document.querySelectorAll('.time-slot.selected').forEach(el => el.classList.remove('selected'));
             this.classList.add('selected');
             selectedTime = this.textContent;
@@ -81,18 +114,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    //Pro chybové hlášky
     function showError(msg) {
         errorMsg.textContent = msg;
         errorMsg.style.display = 'block';
     }
-
     function hideError() {
         errorMsg.textContent = '';
         errorMsg.style.display = 'none';
     }
 
-    //Odeslání formuláře
     reservationForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         const name = document.getElementById('name').value.trim();
@@ -117,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hideError();
 
         try {
-            // Tady odeslíváme do Supabase
+            //tady odesíláme do Supabase
             const { data, error } = await supabase
                 .from('Rezervace')
                 .insert([{
@@ -130,21 +160,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     cas: selectedTime
                 }]);
 
-            if (error) throw error;
+            if (error) {
+                //hláška pro obsazený termín
+                if (error.code === '23505') {
+                    showError('Tento termín je již obsazený, vyberte prosím jiný čas.');
+                } else {
+                    showError('Nepodařilo se odeslat rezervaci. Zkuste to prosím znovu.');
+                }
+                return;
+            }
 
-            // Úspěšné odeslání
-            alert(
-                `Rezervace úspěšně odeslána!\n\nJméno: ${name} ${surname}\nTelefon: ${phone}\nE-mail: ${email}\nDatum: ${selectedDate.split('-').reverse().join('.')}\nČas: ${selectedTime}`
-            );
-
-            // Reset formuláře
+            alert('OK\n\nRezervace byla úspěšně vytvořena!');
             reservationForm.reset();
             reservationForm.classList.add('hidden');
             timeSlotsContainer.classList.add('hidden');
             datePicker.value = '';
             selectedTime = '';
             selectedDate = '';
-            
+
         } catch (error) {
             console.error('Chyba při ukládání rezervace:', error);
             showError('Nepodařilo se odeslat rezervaci. Zkuste to prosím znovu.');
@@ -155,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const aboutUsSection = document.getElementById('kontakt');
         aboutUsSection.scrollIntoView({ behavior: 'smooth' });
     }
-
     document.querySelector('nav a[href="#kontakt"]').addEventListener('click', function(e) {
         e.preventDefault();
         showAboutUs();
@@ -174,7 +206,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const hours = now.getHours();
         const day = now.getDay();
-        return ![0, 6].includes(day) && hours >= 11 && hours < 21;
+        if (day === 0 || day === 6) {
+            return false;
+        }
+        return hours >= 11 && hours < 21;
     }
 
     function addOpenStatus() {
@@ -188,7 +223,6 @@ document.addEventListener('DOMContentLoaded', function() {
         statusElement.style.fontWeight = 'normal';
         oteviraci.appendChild(statusElement);
     }
-    
-    addOpenStatus();
 
+    addOpenStatus();
 });
